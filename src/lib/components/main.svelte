@@ -4,9 +4,9 @@
   import TechItem from "./tech-item.svelte";
 </script>
 
-<p class="font-bold text-7xl text-gray-700">Milan Jaritz</p>
+<p class="font-bold sm:text-7xl text-5xl text-gray-700">Milan Jaritz</p>
 
-<div class="absolute right-44 top-28">
+<div class="md:absolute right-44 top-28 sm:scale-100 scale-75">
   <div class="w-[401px] h-[500px] mt-8 relative group">
     <img
       src="/milan.jpg"

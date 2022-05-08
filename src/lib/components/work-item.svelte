@@ -2,6 +2,7 @@
   import type { Tech } from "$lib/types/types";
   import Icon from "@iconify/svelte";
   import TechItem from "./tech-item.svelte";
+  import WorkItemImage from "./work-item-image.svelte";
   import WorkItemLink from "./work-item-link.svelte";
 
   export let text: string;
@@ -25,8 +26,11 @@
     {/if}
   </div>
   <div class="flex mb-4 gap-3" />
+
+  <WorkItemImage class="sm:hidden block mx-auto my-8" {imgSrc} />
+
   <div class="flex gap-10">
-    <img src={imgSrc} class="w-32 h-32 object-cover rounded-2xl border" alt="" />
+    <WorkItemImage class="hidden sm:block" {imgSrc} />
     <div class="flex flex-col">
       <p class="text-gray-600">{text}</p>
       <div class="flex-grow" />
