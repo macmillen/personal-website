@@ -3,9 +3,9 @@
   import WorkItem from "./work-item.svelte";
 </script>
 
-<Section id="work" n="02.">Work</Section>
+<Section id="projects" n="02.">Projects</Section>
 
-<div class="flex flex-col gap-14 sm:mx-10">
+<div class="flex flex-col sm:mx-10 divide-y -mt-10">
   <WorkItem
     link="https://lettranslate.com/"
     text="Intoducing a new way to localize your products. Distribute each individual team member across multiple languages and projects so that your resources stay safe and protected. Get a high confidence by being able to traverse the history of each translation. That way mistakes can be easily undone while keeping a detailed and clean activity log."

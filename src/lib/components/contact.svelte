@@ -1,16 +1,13 @@
 <script>
   import Icon from "@iconify/svelte";
+  import ProfileImage from "./profile-image.svelte";
   import Section from "./section.svelte";
 </script>
 
 <Section id="contact" n="03.">Contact</Section>
 
 <div class="flex flex-col items-center">
-  <div
-    style="background-image: url(/milan.jpg); background-position: 50% 30%; background-size: 200%;"
-    class="rounded-full w-32 h-32 bg-center"
-    alt=""
-  />
+  <ProfileImage />
   <div class="mt-7 flex flex-col items-center text-lg text-gray-600">
     <p class="font-bold">Milan Jaritz</p>
     <a href="mailto:milan.jaritz@gmail.com">milan.jaritz@gmail.com</a>
