@@ -6,7 +6,7 @@
   import TechItem from "./tech-item.svelte";
 </script>
 
-<div class="flex gap-20">
+<div class="flex gap-10 justify-between items-center">
   <div>
     <p class="font-bold sm:text-7xl text-5xl text-gray-700 text-center sm:text-left">
       Milan Jaritz

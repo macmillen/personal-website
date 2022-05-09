@@ -1,5 +1,5 @@
 <div class="hidden sm:block">
-  <div class="w-[401px] h-[500px] -mt-8 relative group">
+  <div class="sm:w-[266px] sm:h-[333px] lg:w-[320px] lg:h-[400px] -mt-8 relative group">
     <img
       src="/milan.jpg"
       alt="author"

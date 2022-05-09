@@ -6,7 +6,7 @@
 
 <Section id="contact" n="03.">Contact</Section>
 
-<div class="flex flex-col items-center">
+<div class="flex flex-col items-center max-w-screen-sm">
   <ProfileImage />
   <div class="mt-7 flex flex-col items-center text-lg text-gray-600">
     <p class="font-bold">Milan Jaritz</p>
@@ -28,6 +28,5 @@
       target="_blank">linkedin.com/in/milan-jaritz</a
     >
   </div>
+  <img src="/private_life.jpg" width="600px" class="mx-auto mt-20 rounded-3xl" alt="" />
 </div>
-
-<img src="/private_life.jpg" width="600px" class="mx-auto mt-60 rounded-3xl" alt="" />

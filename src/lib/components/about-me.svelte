@@ -5,9 +5,39 @@
 
 <Section id="about" n="01.">About Me</Section>
 
-<div class="flex gap-10">
+<div class="flex gap-10 max-w-screen-sm">
   <div class="flex flex-col gap-10">
-    <Paragraph>Hello! I'm Milan, a software engineer based in Berlin.</Paragraph>
+    <div>
+      <h2 class="text-2xl text-gray-500 mb-5">Graduation</h2>
+      <div class="flex justify-between items-center">
+        <div>
+          <Paragraph>BSc Computer Science</Paragraph>
+          <p class="text-gray-500">Technical University Mittelhessen, Gießen (Germany)</p>
+        </div>
+        <img class="w-32" src="/thm.png" alt="" />
+      </div>
+      <p class="text-gray-500">Grade : 1.9 (82%)</p>
+    </div>
+
+    <Paragraph>Hello! I'm Milan, a tech savvy software engineer based in Berlin.</Paragraph>
+
+    <Paragraph>
+      I have experience with the development of high performant web applications. My role as a
+      frontend engineer at Passbase was to develop and take ownership of a diverse range of
+      applications written in React, Next.js and GraphQL. Including the development of a Web-SDK for
+      identity verification. Further applications I worked on include an customer dashboard and
+      internal dashboard for managing identity verifications.
+    </Paragraph>
+    <Paragraph>
+      After I left my previous company I created a translation management tool. The stack I used for
+      this project included SvelteKit, Prisma ORM (with PostgreSQL), GraphQL, Node.js and
+      TypeScript.
+    </Paragraph>
+
+    <Paragraph>
+      I am used to work in an agile environment within the SCRUM framework. I also have experience
+      leading meetings as a SCRUM master.
+    </Paragraph>
 
     <Paragraph>
       Before my current job at Passbase I have gained professional experience working for
@@ -23,7 +53,5 @@
       where I work as a frontend engineer on a wide variety of interesting and meaningful projects
       on a daily basis.
     </Paragraph>
-
-    <Paragraph>Here are a few technologies I've been working with recently:</Paragraph>
   </div>
 </div>

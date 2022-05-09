@@ -6,6 +6,8 @@
 </script>
 
 <Main />
-<AboutMe />
-<Work />
-<Contact />
+<div class="max-w-screen-sm mx-auto">
+  <AboutMe />
+  <Work />
+  <Contact />
+</div>

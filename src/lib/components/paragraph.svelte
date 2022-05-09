@@ -1,3 +1,3 @@
-<div class="text-gray-600 text-xl max-w-screen-sm">
+<div class="text-gray-600 text-xl">
   <slot />
 </div>
