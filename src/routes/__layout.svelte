@@ -1,5 +1,6 @@
 <script>
   import Header from "$lib/components/header.svelte";
+  import Link from "$lib/components/link.svelte";
   import Icon from "@iconify/svelte";
   import "../app.css";
 </script>
@@ -39,4 +40,29 @@
   >
 
   <div class="h-24 w-px bg-grayBlue" />
+</div>
+
+<div class="py-14 bg-gray-800 sm:px-40 px-7 flex items-center mix-blend-exclusion invert">
+  <div class="flex flex-col text-white gap-3 font-medium">
+    <p>
+      <Icon icon="mdi:wrench" class="inline mr-1" />
+      Built with
+      <Link href="https://kit.svelte.dev/">SvelteKit</Link>
+      &
+      <Link href="https://tailwindcss.com/">Tailwind</Link>
+      [ Js: 34KB, CSS: 4.4KB ]
+    </p>
+    <p>
+      <Icon icon="mdi:brush" class="inline mr-1" />
+      Designed & Built by Milan Jaritz
+    </p>
+    <p>
+      <Icon icon="mdi:earth" class="inline mr-1" />
+      Hosted on <Link href="https://vercel.com/">Vercel</Link>
+    </p>
+    <p>
+      <Icon icon="mdi:lightbulb" class="inline mr-1" />
+      Inspired by <Link href="https://brittanychiang.com/">Brittany Chiang</Link>
+    </p>
+  </div>
 </div>
