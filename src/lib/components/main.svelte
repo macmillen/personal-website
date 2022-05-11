@@ -18,9 +18,13 @@
     </div>
 
     <div class="mt-6 space-y-2">
-      <Paragraph>I'm a <Emph>fullstack</Emph> software engineer based in Berlin.</Paragraph>
-      <Paragraph>I build <Emph>websites, applications</Emph>, and everything in between.</Paragraph>
-      <Paragraph>
+      <Paragraph size="lg"
+        >I'm a <Emph>fullstack</Emph> software engineer based in Berlin.</Paragraph
+      >
+      <Paragraph size="lg"
+        >I build <Emph>websites, applications</Emph>, and everything in between.</Paragraph
+      >
+      <Paragraph size="lg">
         Founder of <Link href="https://lettranslate.com/">lettranslate.com</Link>.
       </Paragraph>
     </div>

@@ -18,7 +18,7 @@
     <Icon icon="mdi:folder" class="w-10 h-10 text-gray-500 hidden sm:block" />
     <WorkItemImage class="sm:hidden block w-20 h-20" {imgSrc} />
     <div class="flex justify-between w-full items-center flex-wrap gap-2">
-      <h2 class="text-xl">{title}</h2>
+      <h2 class="text-xl text-gray-700">{title}</h2>
       <div class="flex gap-2">
         {#if link}
           <WorkItemLink icon="mdi:open-in-new" {link} />

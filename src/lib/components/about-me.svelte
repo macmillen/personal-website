@@ -10,7 +10,7 @@
   <div class="flex flex-col gap-10">
     <div>
       <h2 class="text-2xl text-gray-500 mb-5">Graduation</h2>
-      <div class="flex justify-between items-center">
+      <div class="flex justify-between items-start sm:flex-row flex-col-reverse gap-3 sm:gap-0">
         <div>
           <Paragraph>BSc Computer Science</Paragraph>
           <p class="text-gray-500">Technical University Mittelhessen, Gießen (Germany)</p>
