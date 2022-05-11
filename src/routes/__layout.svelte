@@ -66,3 +66,7 @@
     </p>
   </div>
 </div>
+
+<svelte:head>
+  <title>Milan Jaritz Portfolio</title>
+</svelte:head>
