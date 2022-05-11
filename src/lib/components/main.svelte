@@ -1,6 +1,7 @@
 <script>
   import AnimatedProfileImage from "./animated-profile-image.svelte";
   import Emph from "./emph.svelte";
+  import Link from "./link.svelte";
   import Paragraph from "./paragraph.svelte";
   import ProfileImage from "./profile-image.svelte";
   import TechItem from "./tech-item.svelte";
@@ -19,7 +20,9 @@
     <div class="mt-6 space-y-2">
       <Paragraph>I'm a <Emph>fullstack</Emph> software engineer based in Berlin.</Paragraph>
       <Paragraph>I build <Emph>websites, applications</Emph>, and everything in between.</Paragraph>
-      <Paragraph>Founder of <Emph>lettranslate</Emph>.</Paragraph>
+      <Paragraph>
+        Founder of <Link href="https://lettranslate.com/">lettranslate.com</Link>.
+      </Paragraph>
     </div>
 
     <p class="font-bold mt-8 text-gray-600 text-lg">My current favorite tech:</p>
