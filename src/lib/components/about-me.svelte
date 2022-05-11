@@ -20,8 +20,6 @@
       <p class="text-gray-500">Grade : 1.9 (82%)</p>
     </div>
 
-    <Paragraph>Hello! I'm Milan, a tech savvy software engineer based in Berlin.</Paragraph>
-
     <Paragraph>
       I have experience with the development of high performant web applications. My role as a
       frontend engineer at Passbase was to develop and take ownership of a diverse range of

@@ -2,7 +2,7 @@
   export let href: string;
 </script>
 
-<a {href} class="hover:bg-blue-500/10 transition h-full px-3">
+<a {href} class="hover:bg-blue-500/10 transition h-full px-2">
   <div class="h-full flex items-center">
     <slot />
   </div>

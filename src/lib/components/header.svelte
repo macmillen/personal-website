@@ -3,7 +3,7 @@
 </script>
 
 <div
-  class="fixed w-full left-0 top-0 sm:h-20 h-16 flex items-center gap-5 text-gray-700 sm:px-12 px-4 bg-white/20 z-50"
+  class="fixed w-full left-0 top-0 sm:h-20 h-16 flex items-center text-gray-700 sm:px-12 px-2 bg-white/20 z-50"
   style="box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); backdrop-filter: blur(5px); border: 1px solid rgba(255, 255, 255, 0.3);"
 >
   <div class="h-full items-center sm:gap-1 flex">
