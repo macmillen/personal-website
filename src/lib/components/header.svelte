@@ -9,7 +9,7 @@
   style="box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); border: 1px solid rgba(255, 255, 255, 0.3);"
   in:fly={{ y: -200 }}
 >
-  <div class="h-full items-center sm:gap-1 flex">
+  <div class="h-full items-center gap-4 flex">
     <HeaderLinks />
   </div>
 

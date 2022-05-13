@@ -29,7 +29,7 @@
 
 <div
   class="max-w-screen-2xl mx-auto px-5 sm:px-20 sm:pt-52 lg:px-40 pt-28 pb-20 transition
-    {$headerIsOpen ? 'blur' : ''}"
+    {$headerIsOpen ? 'opacity-40' : ''}"
 >
   <slot />
 </div>
