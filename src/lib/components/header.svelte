@@ -7,6 +7,7 @@
   style="box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); border: 1px solid rgba(255, 255, 255, 0.3);"
 >
   <div class="h-full items-center sm:gap-1 flex">
+    <HeaderLink href="#work">Work</HeaderLink>
     <HeaderLink href="#about">About</HeaderLink>
     <HeaderLink href="#projects">Projects</HeaderLink>
     <HeaderLink href="#contact">Contact</HeaderLink>

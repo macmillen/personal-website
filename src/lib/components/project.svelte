@@ -3,7 +3,7 @@
   import Section from "./section.svelte";
 </script>
 
-<Section id="projects" n="02.">Projects</Section>
+<Section id="projects" n="03.">Projects</Section>
 
 <div class="flex flex-col divide-y -mt-10">
   <ProjectItem

@@ -3,6 +3,7 @@
   import Icon from "@iconify/svelte";
   import ProjectItemImage from "./project-item-image.svelte";
   import ProjectItemLink from "./project-item-link.svelte";
+  import TechItemContainer from "./tech-item-container.svelte";
   import TechItem from "./tech-item.svelte";
 
   export let text: string;
@@ -39,9 +40,9 @@
     </div>
   </div>
 
-  <div class="flex gap-x-3 gap-y-1.5 flex-wrap mt-6">
+  <TechItemContainer class="mt-6">
     {#each techs as item}
       <TechItem {item} />
     {/each}
-  </div>
+  </TechItemContainer>
 </div>
