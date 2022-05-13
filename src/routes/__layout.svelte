@@ -92,4 +92,11 @@
 
 <svelte:head>
   <title>Milan Jaritz Portfolio</title>
+  {#if $headerIsOpen}
+    <style>
+      body {
+        overflow: hidden;
+      }
+    </style>
+  {/if}
 </svelte:head>
