@@ -1,13 +1,36 @@
 <script>
+  import HeaderMobile from "$lib/components/header-mobile.svelte";
   import Header from "$lib/components/header.svelte";
   import Link from "$lib/components/link.svelte";
+  import { headerIsOpen } from "$lib/stores/header.store";
   import Icon from "@iconify/svelte";
+  import { onMount } from "svelte";
   import "../app.css";
+
+  let windowWidth = 1000;
+  let init = false;
+
+  $: isMobile = windowWidth < 640;
+
+  onMount(() => {
+    setTimeout(() => (init = true), 0);
+  });
 </script>
 
-<Header />
+<svelte:window bind:innerWidth={windowWidth} />
 
-<div class="max-w-screen-2xl mx-auto px-5 sm:px-20 sm:pt-52 lg:px-40 pt-10 pb-20">
+{#if init}
+  {#if isMobile}
+    <HeaderMobile />
+  {:else}
+    <Header />
+  {/if}
+{/if}
+
+<div
+  class="max-w-screen-2xl mx-auto px-5 sm:px-20 sm:pt-52 lg:px-40 pt-28 pb-20 transition
+    {$headerIsOpen ? 'blur' : ''}"
+>
   <slot />
 </div>
 
