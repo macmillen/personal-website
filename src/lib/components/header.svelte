@@ -21,9 +21,10 @@
           <Icon icon="mdi:close" class="w-8 h-8 text-gray-400" />
         </div>
       {/if}
-      <HeaderLink n="01." href="#about" on:click={() => (isOpen = false)}>About</HeaderLink>
-      <HeaderLink n="02." href="#projects" on:click={() => (isOpen = false)}>Projects</HeaderLink>
-      <HeaderLink n="03." href="#contact" on:click={() => (isOpen = false)}>Contact</HeaderLink>
+      <HeaderLink n="01." href="#work" on:click={() => (isOpen = false)}>Work</HeaderLink>
+      <HeaderLink n="02." href="#about" on:click={() => (isOpen = false)}>About</HeaderLink>
+      <HeaderLink n="03." href="#projects" on:click={() => (isOpen = false)}>Projects</HeaderLink>
+      <HeaderLink n="04." href="#contact" on:click={() => (isOpen = false)}>Contact</HeaderLink>
     </div>
 
     <div class="flex-grow" />

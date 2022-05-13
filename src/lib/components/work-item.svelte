@@ -1,47 +1,16 @@
 <script lang="ts">
-  import type { Tech } from "$lib/types/types";
-  import Icon from "@iconify/svelte";
-  import TechItem from "./tech-item.svelte";
-  import WorkItemImage from "./work-item-image.svelte";
-  import WorkItemLink from "./work-item-link.svelte";
-
-  export let text: string;
-  export let techs: Tech[];
-  export let imgSrc: string;
-  export let title: string;
-  export let link: string | undefined = undefined;
-  export let github: string | undefined = undefined;
+  export let selected: boolean;
 </script>
 
-<div class="max-w-screen-sm mb-10">
-  <div class="flex items-center gap-3 mt-10">
-    <Icon icon="mdi:folder" class="w-10 h-10 text-gray-500 hidden sm:block" />
-    <WorkItemImage class="sm:hidden block w-20 h-20" {imgSrc} />
-    <div class="flex justify-between w-full items-center flex-wrap gap-2">
-      <h2 class="text-xl text-gray-700">{title}</h2>
-      <div class="flex gap-2">
-        {#if link}
-          <WorkItemLink icon="mdi:open-in-new" {link} />
-        {/if}
-        {#if github}
-          <WorkItemLink icon="mdi:github" link={github} />
-        {/if}
-      </div>
-    </div>
-  </div>
-  <div class="flex mb-4 gap-3" />
-
-  <div class="flex gap-10">
-    <WorkItemImage class="hidden sm:block" {imgSrc} />
-    <div class="flex flex-col">
-      <p class="text-gray-600">{text}</p>
-      <div class="flex-grow" />
-    </div>
-  </div>
-
-  <div class="flex gap-x-3 gap-y-1.5 flex-wrap mt-6">
-    {#each techs as item}
-      <TechItem {item} />
-    {/each}
+<div class="flex items-center" on:click>
+  <p
+    class="font-bold px-4 py-2 rounded-full transition cursor-pointer
+      {selected ? 'bg-gray-900 hover:bg-gray-700 text-white' : 'hover:bg-gray-200 text-gray-800'}"
+  >
+    <slot />
+  </p>
+  <div class="sm:flex hidden items-center w-12 flex-shrink-0">
+    <div class="h-px bg-coolTurquoise transition-all {selected ? 'w-9' : 'invisible w-0'}" />
+    <div class="w-3 h-3 bg-coolTurquoise rounded-full transition {selected ? '' : 'invisible'}" />
   </div>
 </div>

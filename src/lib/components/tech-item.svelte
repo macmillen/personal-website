@@ -20,6 +20,9 @@
     postgres: { icon: "simple-icons:postgresql", text: "PostgreSQL" },
     graphql: { icon: "simple-icons:graphql", text: "GraphQL" },
     tailwind: { icon: "simple-icons:tailwindcss", text: "Tailwind" },
+    react: { icon: "simple-icons:react", text: "React" },
+    next: { icon: "simple-icons:nextdotjs", text: "Next.js" },
+    flutter: { icon: "simple-icons:flutter", text: "Flutter" },
   };
 
   $: itemData = itemMap[item];

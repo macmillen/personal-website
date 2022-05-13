@@ -4,7 +4,7 @@
   import Section from "./section.svelte";
 </script>
 
-<Section id="contact" n="03.">Contact</Section>
+<Section id="contact" n="04.">Contact</Section>
 
 <div class="flex flex-col items-center max-w-screen-sm">
   <ProfileImage />

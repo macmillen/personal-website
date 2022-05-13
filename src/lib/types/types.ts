@@ -12,5 +12,8 @@ export type Tech =
   | "postgres"
   | "graphql"
   | "tailwind"
+  | "react"
+  | "next"
+  | "flutter"
   | "js";
 export type TechData = { icon: string; text: string };

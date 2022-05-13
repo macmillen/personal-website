@@ -1,82 +1,114 @@
-<script>
+<script lang="ts">
+  import type { Tech } from "$lib/types/types";
+  import { scale } from "svelte/transition";
+  import Paragraph from "./paragraph.svelte";
   import Section from "./section.svelte";
+  import TechItemContainer from "./tech-item-container.svelte";
+  import TechItem from "./tech-item.svelte";
   import WorkItem from "./work-item.svelte";
+
+  type Item = {
+    time: string;
+    jobTitle: string;
+    company: string;
+    bullets: string[];
+    url: string;
+    techItems: Tech[];
+  };
+
+  const items: Item[] = [
+    {
+      company: "lettranslate",
+      url: "https://lettranslate.com/",
+      time: "April 2019 - Present",
+      bullets: [
+        "Foundation of lettranslate.com, a translation management software",
+        "Development of a GitHub integration for translation synchronization",
+        "Creation of a web application for managing translations",
+      ],
+      jobTitle: "Fullstack Engineer",
+      techItems: ["svelte", "typescript", "graphql", "prisma", "postgres", "tailwind"],
+    },
+    {
+      company: "Passbase",
+      url: "https://passbase.com/",
+      time: "October 2019 - April 2021",
+      bullets: [
+        "Project owner of Web-SDK of identity verification software",
+        "Development of the customer dashboard and internal backoffice suite",
+        "Lead role as a SCRUM master and worked in agile environment",
+      ],
+      jobTitle: "Frontend Engineer",
+      techItems: ["react", "next"],
+    },
+    {
+      company: "QuestionPro",
+      url: "https://www.questionpro.com/",
+      time: "February 2019 - April 2019",
+      bullets: [
+        "Development of a Survey Dashboard with Angular",
+        "Email parser with the Gmail API",
+        "Survey Notification App with Flutter",
+        "Backend / DB Development with Node.js and MongoDB",
+      ],
+      jobTitle: "Software Engineer Intern",
+      techItems: ["angular", "flutter", "mongodb", "nodejs"],
+    },
+  ];
+
+  let selectedItem = items[0];
 </script>
 
-<Section id="projects" n="02.">Projects</Section>
+<Section id="work" n="01.">Work</Section>
 
-<div class="flex flex-col divide-y -mt-10">
-  <WorkItem
-    link="https://lettranslate.com/"
-    text="Intoducing a new way to localize your products. Distribute each individual team member across multiple languages and projects so that your resources stay safe and protected. Get a high confidence by being able to traverse the history of each translation. That way mistakes can be easily undone while keeping a detailed and clean activity log."
-    techs={["svelte", "typescript", "graphql", "prisma", "postgres", "tailwind"]}
-    imgSrc="/projects/lettranslate.jpg"
-    title="lettranslate.com"
-  />
-  <WorkItem
-    link="https://github-changelogger.vercel.app/"
-    github="https://github.com/macmillen/github-changelogger"
-    text="GitHub ChangeLogger is a tool to track changes across public code repositories hosted on github.com. It only uses the public GitHub API and requires no authentication. The app works without any outbound network traffic and all data is stored inside the local storage."
-    techs={["svelte", "typescript", "tailwind"]}
-    imgSrc="/projects/changelogger.jpg"
-    title="ChangeLogger"
-  />
-  <WorkItem
-    github="https://github.com/macmillen/tool23"
-    text="An app that works with geo data and spherical distances to show available items in your area for rental. (student project)"
-    techs={["ionic", "angular", "typescript", "nodejs", "mongodb"]}
-    imgSrc="/projects/tool23.jpg"
-    title="Tool23"
-  />
-  <WorkItem
-    link="https://mymdb-d5846.firebaseapp.com/"
-    text="A webapp where you can save all of your favorite movies, series and games. Create watchlists and share them with your friends!"
-    techs={["angular", "typescript", "nodejs", "mongodb", "firebase"]}
-    imgSrc="/projects/mymdb.jpg"
-    title="MyMDb"
-  />
-  <WorkItem
-    link="https://roommate-matcher-df7ae.firebaseapp.com/"
-    text="The purpose of the project is to ensure new students are paired with a compatible roommate at the VIA University Collage. (student project)"
-    techs={["angular", "typescript", "firebase"]}
-    imgSrc="/projects/roommate_matcher.jpg"
-    title="Roommate Matcher"
-  />
-  <WorkItem
-    link="https://space-chaos.web.app/"
-    text="A little Space Shooter game."
-    techs={["js", "p5"]}
-    imgSrc="/projects/space_chaos.jpg"
-    title="Space Chaos"
-  />
-  <WorkItem
-    link="https://macmillen.github.io/p5_tetris/src/"
-    github="https://github.com/macmillen/p5_tetris"
-    text="A Tetris clone."
-    techs={["js", "p5"]}
-    imgSrc="/projects/tetris.jpg"
-    title="Tetris"
-  />
-  <WorkItem
-    link="https://macmillen.github.io/p5_gaussian_distribution/"
-    github="https://github.com/macmillen/p5_gaussian_distribution"
-    text="Simulation of two n-sided dices."
-    techs={["js", "p5"]}
-    imgSrc="/projects/gaussian_distribution.jpg"
-    title="Gaussian Distribution"
-  />
-  <WorkItem
-    github="https://github.com/macmillen/processing_maze_solver"
-    text="Brute force algorithm to find a path to the and of the labyrinth."
-    techs={["processing"]}
-    imgSrc="/projects/maze_solver.jpg"
-    title="Maze Solver"
-  />
-  <WorkItem
-    github="https://github.com/macmillen/3D_visualization"
-    text="A really cool 3D visualization tool to play around with. You can choose from different shapes like cube, mandala and dodecahedron while being able to activate all kinds of graphic effects."
-    techs={["processing"]}
-    imgSrc="/projects/3d_visualization.jpg"
-    title="3D Visualization"
-  />
+<div class="flex sm:flex-row flex-col sm:gap-14 gap-7">
+  <div class="flex sm:flex-col flex-row gap-2 sm:overflow-x-visible overflow-x-scroll">
+    {#each items as item}
+      <WorkItem on:click={() => (selectedItem = item)} selected={item === selectedItem}>
+        {item.company}
+      </WorkItem>
+    {/each}
+  </div>
+  {#key selectedItem}
+    <div in:scale={{ start: 0.8, duration: 500 }}>
+      <p class="text-gray-700 font-mono mb-1 font-bold text-xl">
+        {selectedItem.jobTitle}
+        <a
+          href={selectedItem.url}
+          class="text-coolTurquoise font-bold hover:underline"
+          target="_blank"
+        >
+          @{selectedItem.company}
+        </a>
+      </p>
+      <p class="text-blue-500 font-mono mb-3">
+        {selectedItem.time}
+      </p>
+      <ul class="list-[square] text-gray-500 pl-4">
+        {#each selectedItem.bullets as bullet}
+          <li>
+            {bullet}
+          </li>
+        {/each}
+      </ul>
+
+      <TechItemContainer class="mt-4">
+        {#each selectedItem.techItems as item}
+          <TechItem {item} />
+        {/each}
+      </TechItemContainer>
+    </div>
+  {/key}
+</div>
+
+<div class="mt-20">
+  <h2 class="text-2xl text-gray-700 mb-2 italic">Graduation</h2>
+  <div class="flex justify-between items-start sm:flex-row flex-col-reverse gap-3 sm:gap-0">
+    <div>
+      <Paragraph>BSc Computer Science</Paragraph>
+      <p class="text-gray-500">Technical University Mittelhessen, Gießen (Germany)</p>
+    </div>
+    <img class="w-32" src="/thm.png" alt="" />
+  </div>
+  <p class="text-gray-500">Grade : 1.9 (82%)</p>
 </div>

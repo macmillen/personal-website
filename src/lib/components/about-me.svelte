@@ -4,22 +4,10 @@
   import Section from "./section.svelte";
 </script>
 
-<Section id="about" n="01.">About Me</Section>
+<Section id="about" n="02.">About Me</Section>
 
 <div class="flex gap-10 max-w-screen-sm">
   <div class="flex flex-col gap-10">
-    <div>
-      <h2 class="text-2xl text-gray-500 mb-5">Graduation</h2>
-      <div class="flex justify-between items-start sm:flex-row flex-col-reverse gap-3 sm:gap-0">
-        <div>
-          <Paragraph>BSc Computer Science</Paragraph>
-          <p class="text-gray-500">Technical University Mittelhessen, Gießen (Germany)</p>
-        </div>
-        <img class="w-32" src="/thm.png" alt="" />
-      </div>
-      <p class="text-gray-500">Grade : 1.9 (82%)</p>
-    </div>
-
     <Paragraph>
       I have experience with the development of high performant web applications. My role as a
       frontend engineer at Passbase was to develop and take ownership of a diverse range of
