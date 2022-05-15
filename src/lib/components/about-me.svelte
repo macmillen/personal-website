@@ -1,4 +1,5 @@
 <script>
+  import { animate } from "$lib/actions/animate";
   import Link from "./link.svelte";
   import Paragraph from "./paragraph.svelte";
   import Section from "./section.svelte";
@@ -6,7 +7,10 @@
 
 <Section id="about" n="02.">About Me</Section>
 
-<div class="flex gap-10 max-w-screen-sm">
+<div
+  class="flex gap-10 max-w-screen-sm invisible"
+  use:animate={{ _class: "fade-in-up", delay: 300 }}
+>
   <div class="flex flex-col gap-10">
     <Paragraph>
       I have experience with the development of high performant web applications. My role as a

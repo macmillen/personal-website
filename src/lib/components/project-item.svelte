@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { animate } from "$lib/actions/animate";
   import type { Tech } from "$lib/types/types";
   import Icon from "@iconify/svelte";
   import ProjectItemImage from "./project-item-image.svelte";
@@ -14,7 +15,7 @@
   export let github: string | undefined = undefined;
 </script>
 
-<div class="max-w-screen-sm mb-10">
+<div class="max-w-screen-sm mb-10 invisible" use:animate={{ _class: "fade-in-up", delay: 100 }}>
   <div class="flex items-center gap-3 mt-10">
     <Icon icon="mdi:folder" class="w-10 h-10 text-gray-500 hidden sm:block" />
     <ProjectItemImage class="sm:hidden block w-20 h-20" {imgSrc} />

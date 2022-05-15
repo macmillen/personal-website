@@ -1,4 +1,5 @@
 <script>
+  import { animate } from "$lib/actions/animate";
   import Icon from "@iconify/svelte";
   import ProfileImage from "./profile-image.svelte";
   import Section from "./section.svelte";
@@ -6,7 +7,10 @@
 
 <Section id="contact" n="04.">Contact</Section>
 
-<div class="flex flex-col items-center max-w-screen-sm">
+<div
+  class="flex flex-col items-center max-w-screen-sm invisible"
+  use:animate={{ _class: "fade-in-up", delay: 300 }}
+>
   <ProfileImage />
   <div class="mt-7 flex flex-col items-center text-lg text-gray-600">
     <p class="font-bold">Milan Jaritz</p>

@@ -1,4 +1,5 @@
-<script>
+<script lang="ts">
+  import { animate } from "$lib/actions/animate";
   import HeaderMobile from "$lib/components/header-mobile.svelte";
   import Header from "$lib/components/header.svelte";
   import Link from "$lib/components/link.svelte";
@@ -35,7 +36,8 @@
 </div>
 
 <div
-  class="hidden md:flex fixed w-10 md:left-3 lg:left-10 bottom-0 flex-col items-center text-grayBlue gap-5"
+  use:animate={{ _class: "fade-in-up", delay: 1200, duration: 1000 }}
+  class="hidden md:flex fixed w-10 md:left-3 lg:left-10 bottom-0 flex-col items-center text-grayBlue gap-5 invisible"
 >
   <div class="flex flex-col gap-4">
     <a href="https://github.com/macmillen" target="_blank" rel="noopener noreferrer">
@@ -55,7 +57,8 @@
 </div>
 
 <div
-  class="hidden md:flex fixed w-10 md:right-3 lg:right-10 bottom-0 writing [writing-mode:vertical-lr] items-center gap-5 text-blue-500"
+  use:animate={{ _class: "fade-in-up", delay: 1200, duration: 1000 }}
+  class="hidden md:flex fixed w-10 md:right-3 lg:right-10 bottom-0 writing [writing-mode:vertical-lr] items-center gap-5 text-blue-500 invisible"
 >
   <a
     href="mailto:milan.jaritz@gmail.com"
@@ -73,7 +76,7 @@
       <Link href="https://kit.svelte.dev/">SvelteKit</Link>
       &
       <Link href="https://tailwindcss.com/">Tailwind</Link>
-      [ Js: 34KB, CSS: 4.4KB ]
+      [ Js: 34KB, CSS: 4.4KB ] (gzip)
     </p>
     <p>
       <Icon icon="mdi:brush" class="inline mr-1" />

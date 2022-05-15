@@ -1,4 +1,11 @@
-<div class="hidden sm:block">
+<script lang="ts">
+  import { animate, getFadeUpDelay } from "$lib/actions/animate";
+</script>
+
+<div
+  class="hidden sm:block invisible"
+  use:animate={{ _class: "fade-in-up", delay: getFadeUpDelay(1) }}
+>
   <div class="sm:w-[266px] sm:h-[333px] lg:w-[320px] lg:h-[400px] -mt-8 relative group">
     <img
       src="/milan.jpg"

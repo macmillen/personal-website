@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { animate } from "$lib/actions/animate";
   import type { Tech } from "$lib/types/types";
   import { scale } from "svelte/transition";
   import Paragraph from "./paragraph.svelte";
@@ -39,7 +40,7 @@
         "Lead role as a SCRUM master and worked in agile environment",
       ],
       jobTitle: "Frontend Engineer",
-      techItems: ["react", "next"],
+      techItems: ["react", "next", "typescript", "graphql"],
     },
     {
       company: "QuestionPro",
@@ -61,7 +62,10 @@
 
 <Section id="work" n="01.">Work</Section>
 
-<div class="flex sm:flex-row flex-col sm:gap-14 gap-7">
+<div
+  class="flex sm:flex-row flex-col sm:gap-14 gap-7 invisible"
+  use:animate={{ _class: "fade-in-up", delay: 200 }}
+>
   <div class="flex sm:flex-col flex-row gap-2 sm:overflow-x-visible overflow-x-scroll">
     {#each items as item}
       <WorkItem on:click={() => (selectedItem = item)} selected={item === selectedItem}>
