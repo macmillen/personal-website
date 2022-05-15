@@ -28,5 +28,4 @@
       target="_blank">linkedin.com/in/milan-jaritz</a
     >
   </div>
-  <img src="/private_life.jpg" width="600px" class="mx-auto mt-20 rounded-3xl" alt="" />
 </div>
