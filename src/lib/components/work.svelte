@@ -21,7 +21,7 @@
     {
       company: "lettranslate",
       url: "https://lettranslate.com/",
-      time: "April 2019 - Present",
+      time: "April 2021 - Present",
       bullets: [
         "Foundation of lettranslate.com, a translation management software",
         "Development of a GitHub integration for translation synchronization",
